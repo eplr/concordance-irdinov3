@@ -102,19 +102,19 @@
       "id": 1,
       "name": "Nom du fonds",
       "status": "ok",
-      "detail": "\u00ab\u00a0IRDInov\u00a03\u00a0\u00bb — pas de terme durable au sens ESMA. Règle des 80\u00a0% non applicable directement. Risque implicite via communication sectorielle (Greentech, CleanTech)."
+      "detail": "« IRDInov 3 » — pas de terme durable au sens ESMA. Règle des 80 % non applicable directement. Risque implicite via communication sectorielle (Greentech, CleanTech)."
     },
     {
       "id": 2,
       "name": "Règlement de gestion",
       "status": "gap",
-      "detail": "Document réservé aux souscripteurs professionnels (FPCI). Caractéristiques E/S formellement engagées\u00a0: inconnues depuis les sources publiques. Lacune critique n°\u00a01."
+      "detail": "Document réservé aux souscripteurs professionnels (FPCI). Caractéristiques E/S formellement engagées : inconnues depuis les sources publiques. Lacune critique n° 1."
     },
     {
       "id": 3,
       "name": "Annexe SFDR précontractuelle",
       "status": "gap",
-      "detail": "Classification Art.\u00a08 déclarée. Contenu du gabarit RTS Annexe II non publié sur le site. Obligation Art.\u00a010 SFDR non satisfaite publiquement. Lacune critique n°\u00a02."
+      "detail": "Classification Art. 8 déclarée. Contenu du gabarit RTS Annexe II non publié sur le site. Obligation Art. 10 SFDR non satisfaite publiquement. Lacune critique n° 2."
     },
     {
       "id": 4,
@@ -126,18 +126,18 @@
       "id": 5,
       "name": "Portefeuille réel",
       "status": "partial",
-      "detail": "13 start-ups — cohérence sectorielle forte (AgTech, CleanTech, MedTech). 34\u00a0% du portefeuille consolidé sans analyse ESG. Alignement Taxonomie EU\u00a0: 0\u00a0% divulgué."
+      "detail": "13 start-ups — cohérence sectorielle forte (AgTech, CleanTech, MedTech). 34 % du portefeuille consolidé sans analyse ESG. Alignement Taxonomie EU : 0 % divulgué."
     }
   ],
   "gaps": [
     {
       "id": "E-1",
-      "description": "Annexe SFDR précontractuelle non publiée (Art.\u00a010)",
+      "description": "Annexe SFDR précontractuelle non publiée (Art. 10)",
       "layers": "3 → 4",
       "priority": "Critique",
       "priority_key": "critical",
       "amf_risk": "Contrôle direct",
-      "recommendation": "Publier le gabarit RTS Annexe II sur irdi.fr pour IRDInov\u00a03"
+      "recommendation": "Publier le gabarit RTS Annexe II sur irdi.fr pour IRDInov 3"
     },
     {
       "id": "E-2",
@@ -146,7 +146,7 @@
       "priority": "Critique",
       "priority_key": "critical",
       "amf_risk": "Contrôle direct",
-      "recommendation": "Définir et publier\u00a0: % d'investissements durables, part Taxonomie, 3 indicateurs d'incidences négatives sectoriels"
+      "recommendation": "Définir et publier : % d'investissements durables, part Taxonomie, 3 indicateurs d'incidences négatives sectoriels"
     },
     {
       "id": "E-3",
@@ -159,16 +159,16 @@
     },
     {
       "id": "E-4",
-      "description": "34\u00a0% du portefeuille consolidé sans analyse ESG",
+      "description": "34 % du portefeuille consolidé sans analyse ESG",
       "layers": "5",
       "priority": "Élevé",
       "priority_key": "high",
-      "amf_risk": "Fragilise la classification Art.\u00a08",
-      "recommendation": "Atteindre 100\u00a0% de couverture lors de la prochaine campagne Reporting\u00a021"
+      "amf_risk": "Fragilise la classification Art. 8",
+      "recommendation": "Atteindre 100 % de couverture lors de la prochaine campagne Reporting 21"
     },
     {
       "id": "E-5",
-      "description": "Alignement Taxonomie\u00a0: 0\u00a0% divulgué malgré secteurs verts",
+      "description": "Alignement Taxonomie : 0 % divulgué malgré secteurs verts",
       "layers": "3, 4, 5",
       "priority": "Élevé",
       "priority_key": "high",
