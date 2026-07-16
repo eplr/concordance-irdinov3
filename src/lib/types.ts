@@ -54,18 +54,18 @@ export interface AuditData {
 }
 
 export const GRADE_COLORS: Record<string, string> = {
-  A: '#22c55e',
-  B: '#84cc16',
-  C: '#eab308',
-  D: '#f97316',
-  E: '#ef4444',
-  F: '#dc2626',
+  A: '#1ab394',
+  B: '#52c277',
+  C: '#e6be38',
+  D: '#e8923a',
+  E: '#d4555a',
+  F: '#b93535',
 }
 
 export const LAYER_COLORS: Record<string, string> = {
-  ok: '#22c55e',
-  partial: '#f59e0b',
-  gap: '#ef4444',
+  ok: '#1ab394',
+  partial: '#e8923a',
+  gap: '#d4555a',
 }
 
 export const LAYER_LABELS: Record<string, string> = {
@@ -75,10 +75,10 @@ export const LAYER_LABELS: Record<string, string> = {
 }
 
 export const PRIORITY_COLORS: Record<string, string> = {
-  critical: '#ef4444',
-  high: '#f97316',
-  medium: '#eab308',
-  low: '#84cc16',
+  critical: '#d4555a',
+  high: '#e8923a',
+  medium: '#e6be38',
+  low: '#52c277',
 }
 
 export function gradeColor(grade: string): string {
@@ -86,19 +86,19 @@ export function gradeColor(grade: string): string {
 }
 
 export function scoreColor(score: number): string {
-  if (score >= 70) return '#60a5fa'
-  if (score >= 45) return '#f59e0b'
-  return '#ef4444'
+  if (score >= 70) return '#4a90d4'
+  if (score >= 45) return '#e8923a'
+  return '#d4555a'
 }
 
 export function gradeLabel(grade: string): string {
   const labels: Record<string, string> = {
     A: 'Excellent',
     B: 'Bon',
-    C: 'Moyen',
-    D: 'Insuffisant',
-    E: 'Initial',
-    F: 'Non-conforme',
+    C: 'Satisfaisant',
+    D: 'Partiel',
+    E: 'Insuffisant',
+    F: 'Non conforme',
   }
   return labels[grade] ?? grade
 }

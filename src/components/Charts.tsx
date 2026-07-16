@@ -19,10 +19,10 @@ export function ScoreBar({ value, max = 100, color, height = 6, showValue = fals
     <div className="w-full">
       {showValue && (
         <div className="flex justify-end mb-1">
-          <span className="text-xs font-medium" style={{ color: c }}>{value}/{max}</span>
+          <span className="text-sm font-medium" style={{ color: c }}>{value}/{max}</span>
         </div>
       )}
-      <div className="w-full rounded-full overflow-hidden" style={{ height, backgroundColor: '#1e2436' }}>
+      <div className="w-full rounded-full overflow-hidden" style={{ height, backgroundColor: '#0e1c33' }}>
         <div
           className="h-full rounded-full transition-all duration-700"
           style={{ width: `${pct}%`, backgroundColor: c }}
@@ -36,18 +36,18 @@ export function ScoreBar({ value, max = 100, color, height = 6, showValue = fals
 
 export function GradeBadge({ grade, size = 'md' }: { grade: string; size?: 'sm' | 'md' | 'lg' }) {
   const c = gradeColor(grade)
-  const dim = size === 'sm' ? 24 : size === 'lg' ? 52 : 36
-  const fs = size === 'sm' ? 11 : size === 'lg' ? 22 : 15
+  const dim = size === 'sm' ? 26 : size === 'lg' ? 54 : 38
+  const fs = size === 'sm' ? 12 : size === 'lg' ? 23 : 16
   return (
     <div
       style={{
         width: dim, height: dim,
         backgroundColor: c,
-        borderRadius: 8,
+        borderRadius: 9,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         fontWeight: 800, fontSize: fs,
         color: ['A', 'B', 'C'].includes(grade) ? '#000' : '#fff',
-        boxShadow: `0 0 16px ${c}50`,
+        boxShadow: `0 0 18px ${c}45`,
         flexShrink: 0,
       }}
     >
@@ -69,20 +69,20 @@ export function LayerFlow({ layers }: { layers: Layer[] }) {
           <div key={layer.id} className="flex sm:flex-col items-center gap-2 flex-1">
             {/* Card */}
             <div
-              className="flex-1 w-full rounded-xl p-3 border transition-all"
-              style={{ borderColor: `${c}40`, backgroundColor: `${c}08` }}
+              className="flex-1 w-full rounded-xl p-4 border transition-all"
+              style={{ borderColor: `${c}40`, backgroundColor: `${c}09` }}
             >
               <div className="flex items-start justify-between gap-2 mb-2">
-                <span className="text-xs font-bold text-white/60">C{layer.id}</span>
+                <span className="text-sm font-bold text-white/60">C{layer.id}</span>
                 <span
-                  className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                  className="text-sm font-semibold px-2 py-0.5 rounded-full"
                   style={{ backgroundColor: `${c}20`, color: c }}
                 >
                   {label}
                 </span>
               </div>
-              <div className="text-sm font-semibold text-white leading-tight mb-1">{layer.name}</div>
-              <div className="text-xs text-white/50 leading-relaxed">{layer.detail}</div>
+              <div className="text-base font-semibold text-white leading-tight mb-1">{layer.name}</div>
+              <div className="text-sm text-white/50 leading-relaxed">{layer.detail}</div>
             </div>
             {/* Flèche */}
             {!isLast && (
@@ -100,34 +100,34 @@ export function LayerFlow({ layers }: { layers: Layer[] }) {
 export function PartieCard({ partie }: { partie: Partie }) {
   const c = scoreColor(partie.pct)
   return (
-    <div className="rounded-xl border p-4 space-y-3" style={{ borderColor: '#252d40', backgroundColor: '#171b26' }}>
+    <div className="rounded-xl border p-5 space-y-3" style={{ borderColor: '#1c3050', backgroundColor: '#132238' }}>
       <div className="flex items-start justify-between gap-2">
         <div>
-          <div className="text-xs font-bold text-white/40 uppercase tracking-wider">Partie {partie.id}</div>
-          <div className="text-sm font-semibold text-white mt-0.5">{partie.name}</div>
-          <div className="text-xs text-white/40">{partie.articles}</div>
+          <div className="text-sm font-bold text-white/40 uppercase tracking-wider">Partie {partie.id}</div>
+          <div className="text-base font-semibold text-white mt-0.5">{partie.name}</div>
+          <div className="text-sm text-white/40">{partie.articles}</div>
         </div>
         <div className="text-right flex-shrink-0">
-          <div className="text-2xl font-black" style={{ color: c }}>{fmtPct(partie.pct, 0)}</div>
-          <div className="text-xs text-white/40">{partie.score}/{partie.max} pts</div>
+          <div className="text-3xl font-black" style={{ color: c }}>{fmtPct(partie.pct, 0)}</div>
+          <div className="text-sm text-white/40">{partie.score}/{partie.max} pts</div>
         </div>
       </div>
-      <ScoreBar value={partie.pct} height={6} color={c} />
-      <div className="text-xs text-white/30">Pondération : {Math.round(partie.weight * 100)} %</div>
+      <ScoreBar value={partie.pct} height={7} color={c} />
+      <div className="text-sm text-white/30">Pondération\u00a0: {Math.round(partie.weight * 100)}\u00a0%</div>
       {/* Critères */}
-      <div className="space-y-1.5 pt-1 border-t border-white/5">
+      <div className="space-y-2 pt-1 border-t border-white/5">
         {partie.criteria.map(cr => {
           const pct = (cr.score / cr.max) * 100
           const cc = scoreColor(pct)
           return (
             <div key={cr.id} className="flex items-center gap-2">
               <div className="w-24 flex-shrink-0">
-                <div className="h-1.5 rounded-full overflow-hidden" style={{ backgroundColor: '#1e2436' }}>
+                <div className="h-2 rounded-full overflow-hidden" style={{ backgroundColor: '#0e1c33' }}>
                   <div style={{ width: `${pct}%`, height: '100%', backgroundColor: cc, borderRadius: 9999 }} />
                 </div>
               </div>
-              <span className="text-xs text-white/50 flex-1 truncate">{cr.name}</span>
-              <span className="text-xs font-mono flex-shrink-0" style={{ color: cc }}>{cr.score}/{cr.max}</span>
+              <span className="text-sm text-white/50 flex-1 truncate">{cr.name}</span>
+              <span className="text-sm font-mono flex-shrink-0" style={{ color: cc }}>{cr.score}/{cr.max}</span>
             </div>
           )
         })}
@@ -140,10 +140,10 @@ export function PartieCard({ partie }: { partie: Partie }) {
 
 export function GapMatrix({ gaps }: { gaps: Gap[] }) {
   return (
-    <div className="overflow-x-auto rounded-xl border" style={{ borderColor: '#252d40' }}>
+    <div className="overflow-x-auto rounded-xl border" style={{ borderColor: '#1c3050' }}>
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b text-xs uppercase tracking-wider" style={{ borderColor: '#252d40', color: '#7a869a' }}>
+          <tr className="border-b text-sm uppercase tracking-wider" style={{ borderColor: '#1c3050', color: '#7da5c5' }}>
             <th className="text-left px-4 py-3 font-medium w-16">Écart</th>
             <th className="text-left px-4 py-3 font-medium">Description</th>
             <th className="text-center px-3 py-3 font-medium hidden sm:table-cell">Couches</th>
@@ -158,28 +158,28 @@ export function GapMatrix({ gaps }: { gaps: Gap[] }) {
               <tr
                 key={gap.id}
                 className="border-b last:border-0 transition-colors"
-                style={{ borderColor: '#252d40', backgroundColor: i % 2 === 0 ? '#171b26' : '#131720' }}
+                style={{ borderColor: '#1c3050', backgroundColor: i % 2 === 0 ? '#132238' : '#0e1c33' }}
               >
                 <td className="px-4 py-3">
-                  <span className="font-mono text-xs font-bold" style={{ color: '#60a5fa' }}>{gap.id}</span>
+                  <span className="font-mono text-sm font-bold" style={{ color: '#4a90d4' }}>{gap.id}</span>
                 </td>
                 <td className="px-4 py-3">
-                  <div className="font-medium text-white text-sm">{gap.description}</div>
-                  <div className="text-xs mt-0.5 hidden md:block" style={{ color: '#7a869a' }}>{gap.recommendation}</div>
+                  <div className="font-medium text-white text-base">{gap.description}</div>
+                  <div className="text-sm mt-1 hidden md:block" style={{ color: '#7da5c5' }}>{gap.recommendation}</div>
                 </td>
                 <td className="px-3 py-3 text-center hidden sm:table-cell">
-                  <span className="font-mono text-xs" style={{ color: '#7a869a' }}>{gap.layers}</span>
+                  <span className="font-mono text-sm" style={{ color: '#7da5c5' }}>{gap.layers}</span>
                 </td>
                 <td className="px-3 py-3 text-center">
                   <span
-                    className="text-xs font-semibold px-2 py-1 rounded-full"
+                    className="text-sm font-semibold px-2 py-1 rounded-full"
                     style={{ backgroundColor: `${c}15`, color: c }}
                   >
                     {gap.priority}
                   </span>
                 </td>
                 <td className="px-4 py-3 hidden lg:table-cell">
-                  <span className="text-xs" style={{ color: '#7a869a' }}>{gap.amf_risk}</span>
+                  <span className="text-sm" style={{ color: '#7da5c5' }}>{gap.amf_risk}</span>
                 </td>
               </tr>
             )
@@ -207,9 +207,9 @@ export function GapSummary({ gaps }: { gaps: Gap[] }) {
       ].map(({ key, label, count }) => {
         const c = PRIORITY_COLORS[key]
         return (
-          <div key={key} className="flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ backgroundColor: `${c}12` }}>
-            <span className="text-xl font-black" style={{ color: c }}>{count}</span>
-            <span className="text-xs font-medium" style={{ color: c }}>{label}</span>
+          <div key={key} className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ backgroundColor: `${c}12` }}>
+            <span className="text-2xl font-black" style={{ color: c }}>{count}</span>
+            <span className="text-sm font-medium" style={{ color: c }}>{label}</span>
           </div>
         )
       })}
