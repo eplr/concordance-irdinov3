@@ -59,7 +59,7 @@
         { "id": "III-4", "name": "Sources de données", "score": 1, "max": 5, "obs": "Reporting 21 cité, couverture non précisée" },
         { "id": "III-5", "name": "Limites et diligences", "score": 0, "max": 5, "obs": "Non publié" },
         { "id": "III-6", "name": "Politiques d'engagement", "score": 2, "max": 5, "obs": "Clauses ESG dans pactes, comités stratégiques annuels" },
-        { "id": "III-7", "name": "Référence de comparaison", "score": 0, "max": 5, "obs": "Non applicable — fonds Art. 8" }
+        { "id": "III-7", "name": "Benchmark de référence", "score": 0, "max": 5, "obs": "Non applicable — fonds Art. 8" }
       ]
     },
     {
