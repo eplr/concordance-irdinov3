@@ -86,7 +86,7 @@ export function gradeColor(grade: string): string {
 }
 
 export function scoreColor(score: number): string {
-  if (score >= 70) return '#4a90d4'
+  if (score >= 70) return '#1ab394'
   if (score >= 45) return '#e8923a'
   return '#d4555a'
 }

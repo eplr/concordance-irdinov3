@@ -5,14 +5,14 @@ module.exports = {
     extend: {
       colors: {
         c: {
-          black: '#0c1929',
-          card: '#132238',
-          'card-hover': '#0e1c33',
-          border: '#1c3050',
-          'text-muted': '#7da5c5',
-          blue: '#4a90d4',
-          'blue-light': '#7ab8e8',
-          'blue-dark': '#2e6cb0',
+          black: '#101e32',
+          card: '#183148',
+          'card-hover': '#0e1828',
+          border: '#1f3a58',
+          'text-muted': '#a8a490',
+          gold: '#BBA46B',
+          'gold-light': '#d4c08e',
+          'gold-dark': '#9a8654',
         },
         grade: {
           A: '#1ab394',
@@ -35,7 +35,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Karla', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
     },

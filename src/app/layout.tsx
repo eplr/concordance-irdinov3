@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body style={{ backgroundColor: '#0c1929', color: '#dceaf8', minHeight: '100vh' }}>
-        <header style={{ borderBottom: '1px solid #1c3050', position: 'sticky', top: 0, zIndex: 50, backgroundColor: 'rgba(12,25,41,0.95)', backdropFilter: 'blur(8px)' }}>
+      <body style={{ backgroundColor: '#101e32', color: '#f0ebe2', minHeight: '100vh' }}>
+        <header style={{ borderBottom: '1px solid #1f3a58', position: 'sticky', top: 0, zIndex: 50, backgroundColor: 'rgba(16,30,50,0.97)', backdropFilter: 'blur(8px)' }}>
           <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 1.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 68 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
@@ -19,29 +19,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     fontFamily: "'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif",
                     fontSize: '1.25rem',
                     letterSpacing: '0.04em',
-                    color: '#dceaf8',
+                    color: '#f0ebe2',
                   }}
                 >
-                  fide<span style={{ color: '#c49228' }}>§</span>tra
+                  fide<span style={{ color: '#BBA46B' }}>\u00a7</span>tra
                 </span>
-                <div style={{ width: 1, height: 18, backgroundColor: '#1c3050' }} />
-                <span style={{ color: '#7da5c5', fontSize: '0.85rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                <div style={{ width: 1, height: 18, backgroundColor: '#1f3a58' }} />
+                <span style={{ color: '#a8a490', fontSize: '0.85rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                   Concordance SFDR
                 </span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <span style={{
-                  backgroundColor: 'rgba(74,144,212,0.12)',
-                  color: '#4a90d4',
+                  backgroundColor: 'rgba(187,164,107,0.12)',
+                  color: '#BBA46B',
                   fontSize: '0.82rem',
                   fontWeight: 600,
                   padding: '4px 12px',
                   borderRadius: 999,
-                  border: '1px solid rgba(74,144,212,0.25)',
+                  border: '1px solid rgba(187,164,107,0.3)',
                 }}>
                   Article\u00a08 SFDR
                 </span>
-                <span style={{ color: '#7da5c5', fontSize: '0.82rem', display: 'none' }} className="sm-show">
+                <span style={{ color: '#a8a490', fontSize: '0.82rem', display: 'none' }} className="sm-show">
                   Sources publiques · Indice de Concordance v1.0
                 </span>
               </div>
@@ -51,9 +51,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <main>{children}</main>
 
-        <footer style={{ borderTop: '1px solid #1c3050', marginTop: '6rem', padding: '2rem 0' }}>
+        <footer style={{ borderTop: '1px solid #1f3a58', marginTop: '6rem', padding: '2rem 0' }}>
           <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 1.5rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, fontSize: '0.82rem', color: '#7da5c5' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, fontSize: '0.82rem', color: '#a8a490' }}>
               <span>
                 fidestra · Indice de Concordance SFDR v1.0 · Audit basé sur sources publiques uniquement · {new Date().getFullYear()}
               </span>
