@@ -20,7 +20,7 @@ export default function Home() {
           Audit de cohérence documentaire
         </h1>
         <p style={{ color: '#6b6050', fontSize: '1rem', maxWidth: 680, margin: 0, lineHeight: 1.65 }}>
-          Vérification de la concordance entre les cinq couches documentaires du FPCI IRDInov 3
+          Vérification de la concordance entre les cinq niveaux documentaires du FPCI IRDInov 3
           au regard du règlement SFDR (UE 2019/2088) et de la RTS (UE 2022/1288).
           Produit par fidestra · {fmtDate(data.generated_at)}
         </p>
@@ -82,12 +82,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Couches documentaires ── */}
+      {/* ── Niveaux documentaires ── */}
       <section>
         <div style={{ marginBottom: 18 }}>
-          <h2 style={{ fontSize: '1.28rem', fontWeight: 700, color: '#183148', margin: 0 }}>Analyse Concordance — les cinq couches documentaires</h2>
+          <h2 style={{ fontSize: '1.28rem', fontWeight: 700, color: '#183148', margin: 0 }}>Analyse Concordance — les cinq niveaux documentaires</h2>
           <p style={{ fontSize: '0.92rem', color: '#6b6050', marginTop: 6, marginBottom: 0, lineHeight: 1.65 }}>
-            Vérification de la cohérence entre chaque couche : nom → règlement → annexe SFDR → documentation commerciale → portefeuille réel.
+            Vérification de la cohérence entre chaque niveau : nom → règlement → annexe SFDR → documentation commerciale → portefeuille réel.
           </p>
         </div>
         <LayerFlow layers={data.layers} />
@@ -132,7 +132,7 @@ export default function Home() {
           Le cas IRDInov 3 est <strong style={{ color: '#f0ebe2' }}>représentatif du marché</strong> : une intention ESG réelle et documentée
           au niveau entité, mais une traduction documentaire fonds par fonds incomplète.
           Les écarts ne résultent pas d'une mauvaise volonté — ils résultent d'une déconnexion
-          entre les cinq couches qui s'écrivent à des moments différents, par des équipes différentes.
+          entre les cinq niveaux qui s'écrivent à des moments différents, par des équipes différentes.
         </p>
         <p style={{ fontSize: '0.97rem', color: '#a8a490', lineHeight: 1.75, margin: '14px 0 0' }}>
           C'est précisément ce que la <strong style={{ color: '#BBA46B' }}>Méthode Concordance</strong> audite :

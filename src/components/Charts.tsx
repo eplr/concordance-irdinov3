@@ -101,7 +101,7 @@ export function PartieCard({ partie }: { partie: Partie }) {
                   <div style={{ width: `${pct}%`, height: '100%', backgroundColor: cc, borderRadius: 9999 }} />
                 </div>
               </div>
-              <span className="text-sm flex-1 truncate" style={{ color: '#a8a490' }}>{cr.name}</span>
+              <span className="text-sm flex-1" style={{ color: '#a8a490', lineHeight: 1.4 }}>{cr.name}</span>
               <span className="text-sm font-mono flex-shrink-0" style={{ color: cc }}>{cr.score}/{cr.max}</span>
             </div>
           )
