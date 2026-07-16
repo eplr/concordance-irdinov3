@@ -22,11 +22,8 @@ export function ScoreBar({ value, max = 100, color, height = 6, showValue = fals
           <span className="text-sm font-medium" style={{ color: c }}>{value}/{max}</span>
         </div>
       )}
-      <div className="w-full rounded-full overflow-hidden" style={{ height, backgroundColor: '#101e32' }}>
-        <div
-          className="h-full rounded-full transition-all duration-700"
-          style={{ width: `${pct}%`, backgroundColor: c }}
-        />
+      <div className="w-full rounded-full overflow-hidden" style={{ height, backgroundColor: '#0f1e33' }}>
+        <div className="h-full rounded-full transition-all duration-700" style={{ width: `${pct}%`, backgroundColor: c }} />
       </div>
     </div>
   )
@@ -39,18 +36,7 @@ export function GradeBadge({ grade, size = 'md' }: { grade: string; size?: 'sm' 
   const dim = size === 'sm' ? 26 : size === 'lg' ? 54 : 38
   const fs = size === 'sm' ? 12 : size === 'lg' ? 23 : 16
   return (
-    <div
-      style={{
-        width: dim, height: dim,
-        backgroundColor: c,
-        borderRadius: 9,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontWeight: 800, fontSize: fs,
-        color: ['A', 'B', 'C'].includes(grade) ? '#000' : '#fff',
-        boxShadow: `0 0 20px ${c}40`,
-        flexShrink: 0,
-      }}
-    >
+    <div style={{ width: dim, height: dim, backgroundColor: c, borderRadius: 9, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: fs, color: ['A', 'B', 'C'].includes(grade) ? '#000' : '#fff', boxShadow: `0 0 20px ${c}40`, flexShrink: 0 }}>
       {grade}
     </div>
   )
@@ -67,26 +53,16 @@ export function LayerFlow({ layers }: { layers: Layer[] }) {
         const isLast = i === layers.length - 1
         return (
           <div key={layer.id} className="flex sm:flex-col items-center gap-2 flex-1">
-            {/* Card */}
-            <div
-              className="flex-1 w-full rounded-xl p-4 border transition-all"
-              style={{ borderColor: `${c}40`, backgroundColor: `${c}09` }}
-            >
+            <div className="flex-1 w-full rounded-xl p-4 border transition-all" style={{ borderColor: `${c}55`, backgroundColor: '#183148' }}>
               <div className="flex items-start justify-between gap-2 mb-2">
                 <span className="text-sm font-bold" style={{ color: '#a8a490' }}>C{layer.id}</span>
-                <span
-                  className="text-sm font-semibold px-2 py-0.5 rounded-full"
-                  style={{ backgroundColor: `${c}20`, color: c }}
-                >
-                  {label}
-                </span>
+                <span className="text-sm font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: `${c}25`, color: c }}>{label}</span>
               </div>
               <div className="text-base font-semibold leading-tight mb-1" style={{ color: '#f0ebe2' }}>{layer.name}</div>
               <div className="text-sm leading-relaxed" style={{ color: '#a8a490' }}>{layer.detail}</div>
             </div>
-            {/* Flèche */}
             {!isLast && (
-              <div className="font-bold text-lg sm:rotate-90 flex-shrink-0" style={{ color: '#1f3a58' }}>→</div>
+              <div className="font-bold text-lg sm:rotate-90 flex-shrink-0" style={{ color: '#BBA46B' }}>&#8594;</div>
             )}
           </div>
         )
@@ -113,16 +89,15 @@ export function PartieCard({ partie }: { partie: Partie }) {
         </div>
       </div>
       <ScoreBar value={partie.pct} height={7} color={c} />
-      <div className="text-sm" style={{ color: '#a8a490' }}>Pondération\u00a0: {Math.round(partie.weight * 100)}\u00a0%</div>
-      {/* Critères */}
-      <div className="space-y-2 pt-1 border-t" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
+      <div className="text-sm" style={{ color: '#a8a490' }}>Pondération : {Math.round(partie.weight * 100)} %</div>
+      <div className="space-y-2 pt-1 border-t" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
         {partie.criteria.map(cr => {
           const pct = (cr.score / cr.max) * 100
           const cc = scoreColor(pct)
           return (
             <div key={cr.id} className="flex items-center gap-2">
               <div className="w-24 flex-shrink-0">
-                <div className="h-2 rounded-full overflow-hidden" style={{ backgroundColor: '#101e32' }}>
+                <div className="h-2 rounded-full overflow-hidden" style={{ backgroundColor: '#0f1e33' }}>
                   <div style={{ width: `${pct}%`, height: '100%', backgroundColor: cc, borderRadius: 9999 }} />
                 </div>
               </div>
@@ -143,7 +118,7 @@ export function GapMatrix({ gaps }: { gaps: Gap[] }) {
     <div className="overflow-x-auto rounded-xl border" style={{ borderColor: '#1f3a58' }}>
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b text-sm uppercase tracking-wider" style={{ borderColor: '#1f3a58', color: '#a8a490' }}>
+          <tr className="border-b text-sm uppercase tracking-wider" style={{ borderColor: '#1f3a58', color: '#a8a490', backgroundColor: '#183148' }}>
             <th className="text-left px-4 py-3 font-medium w-16">Écart</th>
             <th className="text-left px-4 py-3 font-medium">Description</th>
             <th className="text-center px-3 py-3 font-medium hidden sm:table-cell">Couches</th>
@@ -155,11 +130,7 @@ export function GapMatrix({ gaps }: { gaps: Gap[] }) {
           {gaps.map((gap, i) => {
             const c = PRIORITY_COLORS[gap.priority_key]
             return (
-              <tr
-                key={gap.id}
-                className="border-b last:border-0 transition-colors"
-                style={{ borderColor: '#1f3a58', backgroundColor: i % 2 === 0 ? '#183148' : '#101e32' }}
-              >
+              <tr key={gap.id} className="border-b last:border-0 transition-colors" style={{ borderColor: '#1f3a58', backgroundColor: i % 2 === 0 ? '#183148' : '#0f1e33' }}>
                 <td className="px-4 py-3">
                   <span className="font-mono text-sm font-bold" style={{ color: '#BBA46B' }}>{gap.id}</span>
                 </td>
@@ -171,12 +142,7 @@ export function GapMatrix({ gaps }: { gaps: Gap[] }) {
                   <span className="font-mono text-sm" style={{ color: '#a8a490' }}>{gap.layers}</span>
                 </td>
                 <td className="px-3 py-3 text-center">
-                  <span
-                    className="text-sm font-semibold px-2 py-1 rounded-full"
-                    style={{ backgroundColor: `${c}15`, color: c }}
-                  >
-                    {gap.priority}
-                  </span>
+                  <span className="text-sm font-semibold px-2 py-1 rounded-full" style={{ backgroundColor: `${c}18`, color: c }}>{gap.priority}</span>
                 </td>
                 <td className="px-4 py-3 hidden lg:table-cell">
                   <span className="text-sm" style={{ color: '#a8a490' }}>{gap.amf_risk}</span>
@@ -207,7 +173,7 @@ export function GapSummary({ gaps }: { gaps: Gap[] }) {
       ].map(({ key, label, count }) => {
         const c = PRIORITY_COLORS[key]
         return (
-          <div key={key} className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ backgroundColor: `${c}12` }}>
+          <div key={key} className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ backgroundColor: `${c}14` }}>
             <span className="text-2xl font-black" style={{ color: c }}>{count}</span>
             <span className="text-sm font-medium" style={{ color: c }}>{label}</span>
           </div>

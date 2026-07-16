@@ -58,14 +58,14 @@ export const GRADE_COLORS: Record<string, string> = {
   B: '#52c277',
   C: '#e6be38',
   D: '#e8923a',
-  E: '#d4555a',
-  F: '#b93535',
+  E: '#b85a5a',
+  F: '#a04545',
 }
 
 export const LAYER_COLORS: Record<string, string> = {
   ok: '#1ab394',
   partial: '#e8923a',
-  gap: '#d4555a',
+  gap: '#b85a5a',
 }
 
 export const LAYER_LABELS: Record<string, string> = {
@@ -75,9 +75,9 @@ export const LAYER_LABELS: Record<string, string> = {
 }
 
 export const PRIORITY_COLORS: Record<string, string> = {
-  critical: '#d4555a',
+  critical: '#b85a5a',
   high: '#e8923a',
-  medium: '#e6be38',
+  medium: '#c8a830',
   low: '#52c277',
 }
 
@@ -88,7 +88,7 @@ export function gradeColor(grade: string): string {
 export function scoreColor(score: number): string {
   if (score >= 70) return '#1ab394'
   if (score >= 45) return '#e8923a'
-  return '#d4555a'
+  return '#b85a5a'
 }
 
 export function gradeLabel(grade: string): string {
@@ -103,7 +103,7 @@ export function gradeLabel(grade: string): string {
   return labels[grade] ?? grade
 }
 
-const NBSP = '\u00a0'
+const NBSP = ' '
 
 export function fmtPct(value: number, decimals = 1): string {
   return value.toFixed(decimals).replace('.', ',') + NBSP + '%'
