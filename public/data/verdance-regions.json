@@ -1,0 +1,194 @@
+{
+  "generated_at": "2026-06-15",
+  "methodology": "Indice de Concordance SFDR v1.0",
+  "fund": "SCPI Verdance Régions",
+  "sgp": "Ancoris Gestion",
+  "sfdr_classification": "Article 8",
+  "encours_me": 420,
+  "encours_label": "Capitalisation au 31/12/2025",
+  "entity_type": "SCPI",
+  "audit_scope": "Sources publiques uniquement",
+  "overall_score": 62.8,
+  "overall_grade": "C",
+  "data_quality": 3,
+  "data_quality_label": "Vérifié – données croisées entre rapport annuel et bulletins trimestriels",
+  "report_insight": [
+    "Le cas SCPI Verdance Régions illustre un profil plus mature que la moyenne : le Label ISR immobilier structure la communication ESG, mais la couverture documentaire du parc immobilier reste incomplète sur certains actifs plus anciens.",
+    "La Méthode Concordance confirme ici la cohérence entre l’annexe SFDR précontractuelle et la documentation commerciale, tout en identifiant des écarts résiduels sur la donnée énergétique par actif."
+  ],
+  "sources": ["ancoris-gestion.fr", "Bulletins trimestriels 2025", "Rapport annuel SCPI 2025", "GRESB 2025"],
+  "scpi_metrics": {
+    "performance_score": 71.0,
+    "impact_score": 58.0,
+    "resilience_score": 66.0,
+    "capitalisation_me": 420,
+    "tof": 93.4,
+    "td_2025": 5.8,
+    "ltv": 28.5
+  },
+  "parties": [
+    {
+      "id": "I",
+      "name": "Publications entité",
+      "articles": "Art. 3–5",
+      "score": 10,
+      "max": 15,
+      "pct": 66.7,
+      "weight": 0.15,
+      "weighted": 10.0,
+      "criteria": [
+        { "id": "I-1", "name": "Politique risques durabilité (Art. 3)", "score": 4, "max": 5, "obs": "Politique ESG immobilière publiée, intégrée à la politique d’investissement, incluant une exigence DNSH pour les nouvelles acquisitions" },
+        { "id": "I-2", "name": "Déclaration PAI (Art. 4)", "score": 3, "max": 5, "obs": "Rapport annuel présentant 10 des 18 indicateurs PAI immobiliers" },
+        { "id": "I-3", "name": "Politique de rémunération (Art. 5)", "score": 3, "max": 5, "obs": "Politique de rémunération intégrant un critère ESG qualitatif pour les gérants d’actifs" }
+      ]
+    },
+    {
+      "id": "II",
+      "name": "Pré-contractuel",
+      "articles": "Art. 6–9",
+      "score": 13,
+      "max": 20,
+      "pct": 65.0,
+      "weight": 0.25,
+      "weighted": 16.25,
+      "criteria": [
+        { "id": "II-1", "name": "Intégration risques durabilité (Art. 6)", "score": 3, "max": 5, "obs": "Grille ESG d’acquisition documentée, seuil minimal d’éligibilité non publié" },
+        { "id": "II-2", "name": "Caractéristiques E/S Art. 8", "score": 4, "max": 5, "obs": "Caractéristiques E/S détaillées dans la note d’information, alignées avec le Label ISR immobilier" },
+        { "id": "II-3", "name": "Alignement Taxonomie", "score": 3, "max": 5, "obs": "Méthodologie d’alignement publiée, pourcentage calculé pour 60 % du portefeuille" },
+        { "id": "II-4", "name": "Évaluation DNSH", "score": 3, "max": 5, "obs": "Critères DNSH appliqués aux acquisitions depuis 2023, non rétroactifs sur le parc existant" }
+      ]
+    },
+    {
+      "id": "III",
+      "name": "Site web (Art. 10)",
+      "articles": "Art. 10",
+      "score": 20,
+      "max": 35,
+      "pct": 57.1,
+      "weight": 0.15,
+      "weighted": 8.57,
+      "criteria": [
+        { "id": "III-1", "name": "Description produit et stratégie", "score": 4, "max": 5, "obs": "Stratégie immobilière durable détaillée, structurée selon Art. 10" },
+        { "id": "III-2", "name": "Indicateurs durabilité", "score": 3, "max": 5, "obs": "DPE moyen du portefeuille publié, émissions carbone partiellement ventilées" },
+        { "id": "III-3", "name": "Méthodologies", "score": 3, "max": 5, "obs": "Méthodologie ESG immobilière référencée (grille interne et notation GRESB)" },
+        { "id": "III-4", "name": "Sources de données", "score": 3, "max": 5, "obs": "GRESB et audits énergétiques cités, couverture de 70 % du portefeuille" },
+        { "id": "III-5", "name": "Limites et diligences", "score": 2, "max": 5, "obs": "Limites méthodologiques mentionnées sans détail chiffré" },
+        { "id": "III-6", "name": "Politiques d’engagement", "score": 3, "max": 5, "obs": "Dialogue locataires documenté annuellement, clauses vertes en cours de généralisation" },
+        { "id": "III-7", "name": "Benchmark de référence", "score": 2, "max": 5, "obs": "Comparaison sectorielle GRESB mentionnée sans publication du score" }
+      ]
+    },
+    {
+      "id": "IV",
+      "name": "Reporting périodique",
+      "articles": "Art. 11",
+      "score": 13,
+      "max": 20,
+      "pct": 65.0,
+      "weight": 0.20,
+      "weighted": 13.0,
+      "criteria": [
+        { "id": "IV-1", "name": "Rapport périodique Art. 8 (RTS Annexe IV)", "score": 4, "max": 5, "obs": "Bulletin trimestriel et rapport annuel conformes au gabarit RTS" },
+        { "id": "IV-2", "name": "Comparaison périodes précédentes", "score": 3, "max": 5, "obs": "Comparaison N/N-1 publiée pour le taux de distribution, partielle pour les indicateurs ESG" },
+        { "id": "IV-3", "name": "Principaux investissements", "score": 3, "max": 5, "obs": "Principaux actifs listés avec DPE, sans notation ESG individuelle" },
+        { "id": "IV-4", "name": "Proportion investissements durables", "score": 3, "max": 5, "obs": "Proportion d’investissements durables estimée à 35 %, méthodologie simplifiée" }
+      ]
+    },
+    {
+      "id": "V",
+      "name": "Incidences négatives (PAI)",
+      "articles": "Art. 4 + RTS Annexe I",
+      "score": 18,
+      "max": 30,
+      "pct": 60.0,
+      "weight": 0.25,
+      "weighted": 15.0,
+      "criteria": [
+        { "id": "V-1", "name": "Indicateurs climat/env. obligatoires", "score": 3, "max": 5, "obs": "Émissions de GES Scope 1 et 2 publiées, Scope 3 partiel" },
+        { "id": "V-2", "name": "Indicateurs sociaux/gouv. obligatoires", "score": 3, "max": 5, "obs": "Indicateurs sociaux limités à la gouvernance des principaux locataires" },
+        { "id": "V-3", "name": "Indicateurs env. complémentaires", "score": 3, "max": 5, "obs": "Consommation énergétique par actif partiellement publiée" },
+        { "id": "V-4", "name": "Indicateurs sociaux complémentaires", "score": 3, "max": 5, "obs": "Enquête de satisfaction locataires annuelle mentionnée" },
+        { "id": "V-5", "name": "Méthodologie et sources", "score": 3, "max": 5, "obs": "Audits énergétiques tiers et GRESB, méthodologie documentée" },
+        { "id": "V-6", "name": "Actions d’engagement", "score": 3, "max": 5, "obs": "Clauses vertes en cours de généralisation, suivi annuel des rénovations" }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "id": 1,
+      "name": "Nom du fonds",
+      "status": "ok",
+      "detail": "« SCPI Verdance Régions » – dénomination cohérente avec le Label ISR immobilier, sans terme trompeur au sens ESMA."
+    },
+    {
+      "id": 2,
+      "name": "Règlement de gestion",
+      "status": "partial",
+      "detail": "Note d’information SCPI accessible publiquement. Caractéristiques E/S décrites, mais seuils d’exclusion non chiffrés."
+    },
+    {
+      "id": 3,
+      "name": "Annexe SFDR précontractuelle",
+      "status": "ok",
+      "detail": "Annexe SFDR Article 8 publiée sur le site, conforme au gabarit RTS Annexe II."
+    },
+    {
+      "id": 4,
+      "name": "Documentation commerciale",
+      "status": "partial",
+      "detail": "Communication met en avant le Label ISR immobilier ; les indicateurs de performance ESG par actif restent peu détaillés."
+    },
+    {
+      "id": 5,
+      "name": "Portefeuille réel",
+      "status": "partial",
+      "detail": "217 actifs répartis en régions ; 70 % du parc dispose d’un DPE publié, 30 % sans donnée énergétique consolidée."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "E-1",
+      "description": "Alignement Taxonomie EU incomplet sur 40 % du portefeuille",
+      "layers": "3 → 5",
+      "priority": "Élevé",
+      "priority_key": "high",
+      "amf_risk": "Fragilise le Label ISR immobilier",
+      "recommendation": "Compléter l’analyse d’alignement Taxonomie pour les actifs acquis avant 2023"
+    },
+    {
+      "id": "E-2",
+      "description": "DPE manquant sur 30 % des actifs",
+      "layers": "5",
+      "priority": "Élevé",
+      "priority_key": "high",
+      "amf_risk": "Risque de décote ESG non anticipé",
+      "recommendation": "Programmer les audits énergétiques manquants d’ici la prochaine campagne DPE"
+    },
+    {
+      "id": "E-3",
+      "description": "Émissions carbone Scope 3 non publiées",
+      "layers": "3, 5",
+      "priority": "Moyen",
+      "priority_key": "medium",
+      "amf_risk": "Constat AMF sur la qualité des PAI",
+      "recommendation": "Étendre le calcul carbone au Scope 3 (locataires, chaîne de valeur)"
+    },
+    {
+      "id": "E-4",
+      "description": "Seuils d’exclusion ESG non chiffrés dans le règlement",
+      "layers": "2",
+      "priority": "Moyen",
+      "priority_key": "medium",
+      "amf_risk": "Cohérence entité / produit",
+      "recommendation": "Publier les seuils quantitatifs d’exclusion sectorielle et normative"
+    },
+    {
+      "id": "E-5",
+      "description": "Notation GRESB non publiée publiquement",
+      "layers": "3 → 4",
+      "priority": "Faible",
+      "priority_key": "low",
+      "amf_risk": "Transparence volontaire",
+      "recommendation": "Publier le score GRESB annuel sur le site pour renforcer la preuve documentaire"
+    }
+  ]
+}

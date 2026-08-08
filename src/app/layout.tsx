@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'fidestra | Concordance SFDR — IRDInov 3',
-  description: 'Audit de cohérence documentaire SFDR — FPCI IRDInov 3 — IRDI Capital Investissement · Indice de Concordance v1.0',
+  title: 'fidestra | Concordance SFDR',
+  description: 'Audit de cohérence documentaire SFDR · Indice de Concordance v1.0',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -20,11 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div style={{ width: 1, height: 18, backgroundColor: 'rgba(187,164,107,0.35)' }} />
                 <span style={{ color: '#a8a490', fontSize: '0.85rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                   Concordance SFDR
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ backgroundColor: 'rgba(187,164,107,0.14)', color: '#BBA46B', fontSize: '0.82rem', fontWeight: 600, padding: '4px 12px', borderRadius: 999, border: '1px solid rgba(187,164,107,0.35)' }}>
-                  Article 8 SFDR
                 </span>
               </div>
             </div>

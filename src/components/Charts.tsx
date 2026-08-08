@@ -1,6 +1,6 @@
 'use client'
 
-import { gradeColor, scoreColor, LAYER_COLORS, LAYER_LABELS, PRIORITY_COLORS, fmtPct, type Layer, type Gap, type Partie } from '@/lib/types'
+import { gradeColor, scoreColor, LAYER_COLORS, LAYER_LABELS, PRIORITY_COLORS, fmtPct, NBSP, type Layer, type Gap, type Partie } from '@/lib/types'
 
 // ── Barre de score ────────────────────────────────────────────────────────────
 
@@ -89,7 +89,7 @@ export function PartieCard({ partie }: { partie: Partie }) {
         </div>
       </div>
       <ScoreBar value={partie.pct} height={7} color={c} />
-      <div className="text-sm" style={{ color: '#a8a490' }}>Pondération : {Math.round(partie.weight * 100)} %</div>
+      <div className="text-sm" style={{ color: '#a8a490' }}>Pondération : {fmtPct(partie.weight * 100, 0)}</div>
       <div className="space-y-2 pt-1 border-t" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
         {partie.criteria.map(cr => {
           const pct = (cr.score / cr.max) * 100

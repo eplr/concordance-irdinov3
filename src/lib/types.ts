@@ -5,6 +5,15 @@ export interface Criterion {
   max: number
   obs: string
 }
+export interface ScpiMetrics {
+  performance_score?: number
+  impact_score?: number
+  resilience_score?: number
+  capitalisation_me?: number
+  tof?: number
+  td_2025?: number
+  ltv?: number
+}
 
 export interface Partie {
   id: string
@@ -42,12 +51,16 @@ export interface AuditData {
   sgp: string
   sfdr_classification: string
   encours_me: number
+  encours_label?: string
   entity_type: string
   audit_scope: string
   overall_score: number
   overall_grade: string
   data_quality: number
   data_quality_label: string
+  report_insight?: string[]
+  sources?: string[]
+  scpi_metrics?: ScpiMetrics
   parties: Partie[]
   layers: Layer[]
   gaps: Gap[]
@@ -103,10 +116,20 @@ export function gradeLabel(grade: string): string {
   return labels[grade] ?? grade
 }
 
-const NBSP = ' '
+export const NBSP = ' '
+
+export function fmtNumber(value: number, decimals = 0): string {
+  const [intPart, decPart] = value.toFixed(decimals).split('.')
+  const grouped = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, NBSP)
+  return decPart !== undefined ? `${grouped},${decPart}` : grouped
+}
 
 export function fmtPct(value: number, decimals = 1): string {
-  return value.toFixed(decimals).replace('.', ',') + NBSP + '%'
+  return fmtNumber(value, decimals) + NBSP + '%'
+}
+
+export function fmtMoneyMillions(value: number): string {
+  return `${fmtNumber(value, value % 1 === 0 ? 0 : 2)}${NBSP}M€`
 }
 
 export function fmtDate(isoDate: string): string {
